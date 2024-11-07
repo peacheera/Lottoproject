@@ -1,5 +1,25 @@
 package java.oop.lotto.project;
-// 랜덤번호, 입력번호의 출력값 비교 = 등수 출력
-public class Machine {
+
+import javabaisc.oop.IPrinter;
+
+public class Machine implements IPrinter {
+
+	@Override
+	public void turnOn() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void print() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void turnOff() {
+		// TODO Auto-generated method stub
+
+	}
 
 }

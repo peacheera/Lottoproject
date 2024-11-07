@@ -41,7 +41,7 @@ public class ConstructorMain {
 //		printPerson(person5);
 		
 		printPerson(personArr);
-		printPerson(personArr);
+
 	
 	
 	
@@ -66,7 +66,7 @@ public class ConstructorMain {
 			
 			//	formatting print(형식화 출력)
 			// %s:문자열, %d:숫자, %f:실수, \t:탭문자,\n:줄바꿈문자
-		System.out.prinf("이름:%s \t직업:%s \t나이:%d \t키:%4.1f\n",
+		System.out.printf("이름:%s \t직업:%s \t나이:%d \t키:%4.1f\n",
 				person.getName(),
 				person.getJob(),
 				person.getAge(),
