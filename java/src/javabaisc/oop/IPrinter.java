@@ -1,5 +1,5 @@
 package javabaisc.oop;
-
+//인터페이스
 //public static , 상수 , 추상메소드
 // 역할 : 프린터라면 구현해야하는 공통 기능들에 대한 명세를 작성
 public interface IPrinter {

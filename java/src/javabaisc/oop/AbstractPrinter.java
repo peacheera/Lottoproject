@@ -1,5 +1,5 @@
 package javabaisc.oop;
-
+//추상메소드
 public abstract class AbstractPrinter implements IPrinter {
 
 	String sort;

@@ -1,6 +1,6 @@
 package javabaisc.oop;
 
-public class PublicMain {
+public class PrintMain {
 
 	public static void main(String[] args) {
 
