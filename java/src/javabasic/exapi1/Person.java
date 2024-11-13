@@ -15,9 +15,5 @@ public class Person {
 	public String toString() {
 		return this.name + " " + equals(age);
 	
-	}
-	
-
-
-		
+		}	
 	}
