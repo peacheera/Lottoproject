@@ -1,54 +1,61 @@
 package javabasic.exception;
 
 import java.util.List;
+import java.util.Map;
 
 public class Player {
 
 	
-		String name;
-		List<Card> cards;
-
+	private String name;	// 이름 user
+	private List<Card> cardList;	// 카드리스트
+	private Map<Integer, Integer> numCountMap; // 숫자카운트맵
+	private Map<String, Integer> shapeCountMap; // 무늬카운트맵
 	
-	public Player(String name, List<Card> cards) {
+	public Player() {
+	}
+
+	public Player(String name, List<Card> cardList) {
 		super();
 		this.name = name;
-		this.cards = cards;
+		this.cardList = cardList;
 	}
-
-
-	public Player(List<Card> totalCardList) {
-		// TODO Auto-generated constructor stub
-	}
-
 
 	public String getName() {
 		return name;
 	}
 
-
 	public void setName(String name) {
 		this.name = name;
 	}
 
-              
-	public List<Card> getCards() {
-		return cards;
+	public List<Card> getCardList() {
+		return cardList;
 	}
 
-
-	public void setCardList(List<Card> list) {
-		this.cards = list;
+	public void setCardList(List<Card> cardList) {
+		this.cardList = cardList;
+	}
+	
+	public Map<Integer, Integer> getNumCountMap() {
+		return numCountMap;
 	}
 
+	public void setNumCountMap(Map<Integer, Integer> numCountMap) {
+		this.numCountMap = numCountMap;
+	}
+
+	public Map<String, Integer> getShapeCountMap() {
+		return shapeCountMap;
+	}
+
+	public void setShapeCountMap(Map<String, Integer> shapeCountMap) {
+		this.shapeCountMap = shapeCountMap;
+	}
 
 	@Override
 	public String toString() {
-		return name + cards;
+		return name + " " + cardList + "\n" + numCountMap + "\n" + shapeCountMap;
 	}
-
-
-	
-	
-	
 	
 }
+	

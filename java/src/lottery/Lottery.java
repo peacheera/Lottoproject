@@ -1,5 +1,7 @@
 package lottery;
 
+import java.util.List;
+
 public abstract class Lottery{
 		
 		  protected String ticketKind; // 티켓 종류
@@ -7,7 +9,11 @@ public abstract class Lottery{
 
 		    public abstract String getTicketKind();
 		    public abstract int getTicketPrice();
-		    public abstract int[] generateNumbers();
+		    public abstract List<Integer> generateNumbers();
+		    
+		    public Lottery() {
+		    	
+		    }
 }
 	
 		    

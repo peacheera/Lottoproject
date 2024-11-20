@@ -2,24 +2,25 @@ package javabasic.exception;
 
 public class Card {
 
-	private int number; // 숫자 (A~10, j, Q, K)
-	private String shape; // 무늬 (스페이드, 클로버, 다이아몬드, 하트)
+
+	private Integer num;	// 숫자 (A~10, J, Q, K)
+	private String shape;	// 무늬 (스페이드, 다이아몬드, 하트, 클로버)
 	
-	public  Card() {
+	public Card() {
 	}
 
-	public Card(int number, String shape) {
+	public Card(Integer num, String shape) {
 		super();
-		this.number = number;
+		this.num = num;
 		this.shape = shape;
 	}
 
-	public int getNumber() {
-		return number;
+	public Integer getNum() {
+		return num;
 	}
 
-	public void setNumber(int number) {
-		this.number = number;
+	public void setNum(Integer num) {
+		this.num = num;
 	}
 
 	public String getShape() {
@@ -29,12 +30,10 @@ public class Card {
 	public void setShape(String shape) {
 		this.shape = shape;
 	}
-
+	
 	@Override
 	public String toString() {
-		return shape+number;
+		return shape+num;
 	}
-
-	
 	
 }

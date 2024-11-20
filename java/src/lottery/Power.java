@@ -1,7 +1,9 @@
 package lottery;
 
-import java.util.Arrays;
-import java.util.Random;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
 
 public class Power extends Lottery  {
 	
@@ -22,29 +24,22 @@ public class Power extends Lottery  {
 	    public int getTicketPrice() {
 	        return ticketPrice;
 	    }
-
-	    @Override
-	    public int[] generateNumbers() {
-	        Random rand = new Random();
-	        int[] numbers = new int[5];
-	        for (int i = 0; i < 5; i++) {
-	            int num;
-	            boolean isDuplicate;
-	            do {
-	                num = rand.nextInt(65) + 1; // 1~65 사이의 번호
-	                isDuplicate = false;
-	                for (int j = 0; j < i; j++) {
-	                    if (numbers[j] == num) {
-	                        isDuplicate = true;
-	                        break;
-	                    }
-	                }
-	            } while (isDuplicate);
-	            numbers[i] = num;
-	        }
-	        Arrays.sort(numbers);
-	        return numbers;
+	    public List<Integer> generateNumbers(){
+	          Set<Integer> randomNum = new HashSet<Integer>();
+	          int num;
+	      while(randomNum.size()<5) {
+	         num = (int)(Math.random()*20+1);
+	         randomNum.add(num);
+	         Iterator<Integer> it = randomNum.iterator();
+	         while(it.hasNext()) {
+	            
+	         }
+	      }
+	         return (List<Integer>) randomNum;
 	    }
+	    public boolean isPickupMethod() {
+	           return pickupMethod;
+	      }
 	}
 		
 			

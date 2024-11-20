@@ -1,11 +1,12 @@
 package lottery;
 
-import java.util.Arrays;
-import java.util.Random;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class LotteyMain {
 	public static void main(String[] args) {
+		
 		
 	Scanner sc = new Scanner(System.in);
 	 System.out.println("티켓 종류를 선택하세요 "
@@ -37,12 +38,14 @@ public class LotteyMain {
 	     System.out.println("티켓 가격: " + lottery.getTicketPrice() + "원");
 	     System.out.println("START!");
 
-	     int[] generatedNumbers = lottery.generateNumbers();
+	     List<Integer> generatedNumbers = lottery.generateNumbers();
 	     
 	     System.out.println("번호를 입력하세요");
-	     int[] userNumbers = new int[generatedNumbers.length];
-	     for (int i = 0; i < generatedNumbers.length; i++) {
-	         userNumbers[i] = sc.nextInt();
+	     
+	     
+	     List<Integer> userNumbers = new ArrayList<Integer>(generatedNumbers.size());
+	     for (int i = 0; i < generatedNumbers.size(); i++) {
+	        userNumbers.add(sc.nextInt()); 
 	     }
 
 	     int matchCount = 0;
@@ -55,6 +58,8 @@ public class LotteyMain {
 	         }
 	     }
 
+	     
+	     
 	     switch (lottery.getTicketKind()) {
 	         case "Power":
 	             if (matchCount == 5) System.out.println("1등 당첨!");
@@ -69,7 +74,7 @@ public class LotteyMain {
 	             break;
 
 	         case "Lotto":
-	             boolean bonusMatch = userNumbers[5] == generatedNumbers[6];
+	        	 boolean bonusMatch = userNumbers.get(5).equals(generatedNumbers.get(6));
 	             if (matchCount == 6) System.out.println("1등 당첨!");
 	             else if (matchCount == 5 && bonusMatch) System.out.println("2등 당첨!");
 	             else if (matchCount == 5) System.out.println("3등 당첨!");
@@ -79,4 +84,4 @@ public class LotteyMain {
 
 	     sc.close();
 	 }
- }
+}
